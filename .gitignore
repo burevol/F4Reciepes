@@ -4,6 +4,7 @@
 
 # User-specific stuff
 .idea/
+recipes_frontend/node_modules
 
 # Generated files
 .idea/**/contentModel.xml
