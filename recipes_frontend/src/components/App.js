@@ -1,11 +1,17 @@
-import React, { Fragment } from "react";
+import React, {Fragment, useEffect, useState} from "react";
+import CategoryList from "./CategoryList";
+import {Container} from "react-bootstrap";
 
 
-function App () {
+function App (props) {
+
+
     return (
-        <Fragment>
+        <Container>
+            <CategoryList/>
+        </Container>
 
-        </Fragment>
+
     );
 }
 
