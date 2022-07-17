@@ -3,7 +3,7 @@ import {Navbar, Container} from 'react-bootstrap';
 
 function Header() {
     return (
-            <Navbar bg="primary" expand="md" bg="light">
+            <Navbar bg="light" expand="md" >
                 <Container>
                     <Navbar.Brand>Сборник рецептов</Navbar.Brand>
                 </Container>
