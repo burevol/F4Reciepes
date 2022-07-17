@@ -3,7 +3,7 @@ import { Row, Col, Container, Badge } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-function Recipe(props) {
+function Recipe() {
 
     let params = useParams();
     let [recipeData, setRecipeData] = useState({})
@@ -21,7 +21,7 @@ function Recipe(props) {
               <h4>{ recipeData.header } </h4>
                 <p dangerouslySetInnerHTML={{__html:recipeData.content}}></p>
                 {
-                  recipeData.category != undefined ? recipeData.category.map((cat) => <Badge pill="true" key={cat.id}>{cat.category}</Badge>) : ""
+                  recipeData.category !== undefined ? recipeData.category.map((cat) => <Badge pill="true" key={cat.id}>{cat.category}</Badge>) : ""
                 }
 
           </Col>

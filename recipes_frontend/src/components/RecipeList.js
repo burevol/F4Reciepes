@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import {ListGroup} from "react-bootstrap";
 
-function RecipeList(props) {
+function RecipeList() {
     let params = useParams();
     let [recipeList, setRecipeList] = useState([])
 
@@ -17,12 +17,12 @@ function RecipeList(props) {
     return (
           <ListGroup>
             {
-                recipeList.map(
+                recipeList !== undefined ? recipeList.map(
                     (item) =>
                         <ListGroup.Item key={item.id}>
                              <Link to={`/recipe/${item.id}`}>{item.header}</Link>
                         </ListGroup.Item>
-                )
+                ) : ""
             }
         </ListGroup>
 

@@ -3,9 +3,9 @@ import CategoryCard from "./CategoryCard";
 import {ListGroup} from "react-bootstrap";
 import axios from "axios";
 
-function CategoryList(props) {
+function CategoryList() {
 
-    let [categoryList, setCategoryList] = useState([])
+    let [categoryListData, setCategoryList] = useState([])
 
     useEffect(() => {
         axios.get('http://127.0.0.1:8000/categories/').then((response) => {
@@ -16,12 +16,12 @@ function CategoryList(props) {
     return (
         <ListGroup>
             {
-                categoryList.map(
+                categoryListData !== undefined ? categoryListData.map(
                     (item) =>
                         <ListGroup.Item key={item.id}>
                             <CategoryCard title={item.category} id={item.id} />
                         </ListGroup.Item>
-                )
+                ) : ""
             }
         </ListGroup>
 
