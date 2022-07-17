@@ -1,8 +1,8 @@
 import React, { useState, useEffect }  from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import {ListGroup} from "react-bootstrap";
-import Recipe from "./Recipe";
 
 function RecipeList(props) {
     let params = useParams();
@@ -20,7 +20,7 @@ function RecipeList(props) {
                 recipeList.map(
                     (item) =>
                         <ListGroup.Item key={item.id}>
-                            <Recipe title={item.header} id={item.id} content={item.content} category={item.category}/>
+                             <Link to={`/recipe/${item.id}`}>{item.header}</Link>
                         </ListGroup.Item>
                 )
             }

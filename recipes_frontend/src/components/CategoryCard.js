@@ -1,10 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import {Card, Button} from "react-bootstrap";
 
 function CategoryCard(props) {
     return (
-        <Link to={`/recipes/${props.id}`}>{props.title}</Link>
+        <Link to={`/category/${props.id}`}>{props.title}</Link>
     );
 }
 
