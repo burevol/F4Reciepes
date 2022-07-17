@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from django_filters.rest_framework import DjangoFilterBackend
 
+
 from .models import Category, Recipe
 from .serializers import CategorySerializer, RecipeSerializer
 
